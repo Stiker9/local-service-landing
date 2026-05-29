@@ -9,37 +9,32 @@ export default function Prices() {
   return (
     <section className="bg-warm-50 py-16 sm:py-20">
       <div className="max-w-5xl mx-auto px-4 sm:px-6">
-
         <div className="mb-12">
           <p className="text-brand-600 text-sm font-bold uppercase tracking-widest mb-2">Стоимость</p>
           <h2 className="font-display text-3xl sm:text-4xl font-bold text-stone-900 mb-3">
-            Примерные цены
+            Цены и оценка ремонта
           </h2>
           <p className="text-stone-500 text-base max-w-lg">
-            Ориентировочные цены. Точная стоимость — после осмотра на месте.
+            Точная стоимость зависит от модели и состояния техники. Все суммы согласуются до начала ремонта.
           </p>
         </div>
 
-        {/* Two-column price grid — like Square's service menu */}
         <div className="bg-white rounded-2xl border border-stone-200 overflow-hidden mb-5"
              style={{ boxShadow: '0 2px 16px rgba(0,0,0,0.05)' }}>
           <div className="grid grid-cols-1 md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-stone-100">
-            {/* Column 1 */}
             <div className="divide-y divide-stone-100">
-              {col1.map((item, idx) => (
-                <PriceRow key={idx} item={item} />
+              {col1.map((item) => (
+                <PriceRow key={item.service} item={item} />
               ))}
             </div>
-            {/* Column 2 */}
             <div className="divide-y divide-stone-100">
-              {col2.map((item, idx) => (
-                <PriceRow key={idx} item={item} />
+              {col2.map((item) => (
+                <PriceRow key={item.service} item={item} />
               ))}
             </div>
           </div>
         </div>
 
-        {/* Note */}
         <div className="bg-brand-50 border border-brand-100 rounded-xl px-5 py-4 mb-6">
           <p className="text-stone-600 text-sm leading-relaxed">
             <span className="font-semibold text-brand-700">Важно: </span>
@@ -56,10 +51,9 @@ export default function Prices() {
             style={{ boxShadow: '0 4px 16px rgba(45,106,79,0.25)' }}
           >
             <WhatsAppIcon className="w-5 h-5" />
-            Узнать точную стоимость
+            Уточнить стоимость
           </a>
         </div>
-
       </div>
     </section>
   )

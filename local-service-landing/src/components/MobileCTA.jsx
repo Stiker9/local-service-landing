@@ -15,12 +15,10 @@ export default function MobileCTA() {
         WhatsApp
       </a>
       <a
-        href={business.telegramUrl}
-        target="_blank"
-        rel="noopener noreferrer"
+        href={business.phoneHref}
         className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-sky-500 active:bg-sky-600 text-white font-bold text-sm"
       >
-        Telegram
+        Позвонить
       </a>
       <a
         href={business.phoneHref}

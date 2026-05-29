@@ -3,32 +3,32 @@ import { StarIcon } from './Icons'
 
 const stats = [
   {
-    value: '5.0',
+    value: business.rating,
     suffix: (
       <div className="flex gap-0.5 mt-0.5">
         {[...Array(5)].map((_, i) => <StarIcon key={i} className="w-3.5 h-3.5 text-amber-400" />)}
       </div>
     ),
     label: 'Рейтинг в 2ГИС',
-    sub: 'из 5.0 возможных',
+    sub: 'по данным карточки компании',
   },
   {
-    value: '20',
+    value: String(business.scoresCount),
     suffix: null,
-    label: 'Отзывов клиентов',
-    sub: 'подтверждённых в 2ГИС',
+    label: 'Оценок клиентов',
+    sub: `${business.reviewsCount} отзывов в 2ГИС`,
   },
   {
-    value: 'от 500 ₽',
+    value: '10:00–19:00',
     suffix: null,
-    label: 'Диагностика',
-    sub: 'цена до начала ремонта',
+    label: 'Часы работы',
+    sub: 'по предварительной записи',
   },
   {
-    value: 'Гарантия',
+    value: 'Выезд',
     suffix: null,
-    label: 'На все работы',
-    sub: 'письменно по договорённости',
+    label: 'Возможен на дом',
+    sub: 'по согласованию с мастером',
   },
 ]
 
@@ -37,8 +37,8 @@ export default function TrustBar() {
     <div className="bg-white border-y border-stone-200">
       <div className="max-w-5xl mx-auto px-4 sm:px-6">
         <div className="grid grid-cols-2 lg:grid-cols-4 divide-x divide-y lg:divide-y-0 divide-stone-100">
-          {stats.map((s, idx) => (
-            <div key={idx} className="px-5 py-5 sm:px-6 sm:py-6">
+          {stats.map((s) => (
+            <div key={s.label} className="px-5 py-5 sm:px-6 sm:py-6">
               <div className="flex items-baseline gap-1 mb-1">
                 <span className="font-display font-bold text-2xl sm:text-3xl text-brand-600 leading-none">
                   {s.value}

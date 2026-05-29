@@ -5,7 +5,6 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-stone-200 shadow-sm">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-4">
-
         <div className="flex items-center gap-3 min-w-0">
           <div className="min-w-0">
             <p className="font-bold text-stone-900 text-base sm:text-lg leading-tight tracking-tight">
@@ -40,7 +39,6 @@ export default function Header() {
             <span className="hidden sm:inline">Позвонить</span>
           </a>
         </div>
-
       </div>
     </header>
   )
