@@ -1,37 +1,34 @@
 import { business } from '../data/businessData'
 import { StarIcon } from './Icons'
 
-const items = [
+const stats = [
   {
-    icon: (
-      <div className="flex gap-0.5">
-        {[...Array(5)].map((_, i) => (
-          <StarIcon key={i} className="w-4 h-4 text-amber-400" />
-        ))}
+    value: '5.0',
+    suffix: (
+      <div className="flex gap-0.5 mt-0.5">
+        {[...Array(5)].map((_, i) => <StarIcon key={i} className="w-3.5 h-3.5 text-amber-400" />)}
       </div>
     ),
-    label: `${business.rating} рейтинг`,
-    sub: `в ${business.ratingSource}`,
+    label: 'Рейтинг в 2ГИС',
+    sub: 'из 5.0 возможных',
   },
   {
-    icon: <span className="text-xl">💬</span>,
-    label: `${business.reviewsCount} отзывов`,
-    sub: 'от клиентов',
+    value: '20',
+    suffix: null,
+    label: 'Отзывов клиентов',
+    sub: 'подтверждённых в 2ГИС',
   },
   {
-    icon: <span className="text-xl">🏠</span>,
-    label: 'Выезд на дом',
-    sub: business.district,
+    value: 'от 500 ₽',
+    suffix: null,
+    label: 'Диагностика',
+    sub: 'цена до начала ремонта',
   },
   {
-    icon: <span className="text-xl">📱</span>,
-    label: 'WhatsApp / Telegram',
-    sub: 'удобный способ связи',
-  },
-  {
-    icon: <span className="text-xl">🔖</span>,
-    label: 'Демо-макет',
-    sub: 'для согласования',
+    value: 'Гарантия',
+    suffix: null,
+    label: 'На все работы',
+    sub: 'письменно по договорённости',
   },
 ]
 
@@ -39,17 +36,17 @@ export default function TrustBar() {
   return (
     <div className="bg-white border-y border-stone-200">
       <div className="max-w-5xl mx-auto px-4 sm:px-6">
-        <div className="flex overflow-x-auto gap-0 scrollbar-none py-1">
-          {items.map((item, idx) => (
-            <div
-              key={idx}
-              className="flex items-center gap-3 px-5 py-4 shrink-0 border-r border-stone-100 last:border-r-0 first:pl-0 last:pr-0"
-            >
-              <div className="shrink-0">{item.icon}</div>
-              <div className="min-w-0">
-                <p className="font-semibold text-stone-900 text-sm whitespace-nowrap">{item.label}</p>
-                <p className="text-stone-400 text-xs whitespace-nowrap">{item.sub}</p>
+        <div className="grid grid-cols-2 lg:grid-cols-4 divide-x divide-y lg:divide-y-0 divide-stone-100">
+          {stats.map((s, idx) => (
+            <div key={idx} className="px-5 py-5 sm:px-6 sm:py-6">
+              <div className="flex items-baseline gap-1 mb-1">
+                <span className="font-display font-bold text-2xl sm:text-3xl text-brand-600 leading-none">
+                  {s.value}
+                </span>
               </div>
+              {s.suffix && <div className="mb-1">{s.suffix}</div>}
+              <p className="font-semibold text-stone-900 text-sm leading-tight">{s.label}</p>
+              <p className="text-stone-400 text-xs mt-0.5 leading-tight">{s.sub}</p>
             </div>
           ))}
         </div>

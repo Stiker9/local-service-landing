@@ -7,12 +7,13 @@ import WorkSteps from './components/WorkSteps'
 import Reviews from './components/Reviews'
 import FinalCTA from './components/FinalCTA'
 import Footer from './components/Footer'
+import MobileCTA from './components/MobileCTA'
 
 export default function App() {
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
-      <main className="flex-1">
+      <main className="flex-1 pb-20 sm:pb-0">
         <Hero />
         <TrustBar />
         <Services />
@@ -22,6 +23,7 @@ export default function App() {
         <FinalCTA />
       </main>
       <Footer />
+      <MobileCTA />
     </div>
   )
 }

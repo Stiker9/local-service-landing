@@ -5,30 +5,42 @@ export default function WorkSteps() {
     <section className="bg-white py-16 sm:py-20">
       <div className="max-w-5xl mx-auto px-4 sm:px-6">
 
-        <div className="text-center mb-12">
+        <div className="mb-12">
+          <p className="text-brand-600 text-sm font-bold uppercase tracking-widest mb-2">Процесс</p>
           <h2 className="font-display text-3xl sm:text-4xl font-bold text-stone-900 mb-3">
             Как проходит работа
           </h2>
-          <p className="text-stone-500 text-base max-w-lg mx-auto">
-            Просто и понятно — от заявки до готового результата.
+          <p className="text-stone-500 text-base max-w-lg">
+            От заявки до готового результата — просто и прозрачно.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-4 relative">
-          {/* Connector line — desktop only */}
-          <div className="hidden lg:block absolute top-10 left-[calc(12.5%+1rem)] right-[calc(12.5%+1rem)] h-px bg-brand-100 -z-0" />
+        <div className="relative">
+          {/* Connector line — desktop */}
+          <div className="hidden lg:block absolute top-[2.25rem] left-[calc(12.5%+1.25rem)] right-[calc(12.5%+1.25rem)] h-px"
+               style={{ background: 'linear-gradient(to right, #c8e6d4, #c8e6d4)' }} />
 
-          {business.workSteps.map((step, idx) => (
-            <div key={idx} className="flex flex-col items-center text-center relative">
-              <div className="w-20 h-20 rounded-full bg-brand-50 border-2 border-brand-100 flex items-center justify-center mb-5 relative z-10">
-                <span className="font-display font-bold text-brand-600 text-2xl leading-none">
-                  {step.num}
-                </span>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-4">
+            {business.workSteps.map((step, idx) => (
+              <div key={idx} className="flex flex-col lg:items-center lg:text-center">
+                {/* Number circle */}
+                <div className="relative z-10 w-[4.5rem] h-[4.5rem] rounded-full bg-brand-600 flex items-center justify-center mb-5 shrink-0">
+                  <span className="font-display font-bold text-white text-2xl leading-none">
+                    {step.num}
+                  </span>
+                  {/* Arrow dot on mobile/tablet */}
+                  {idx < business.workSteps.length - 1 && (
+                    <div className="lg:hidden absolute -bottom-5 left-1/2 -translate-x-1/2 w-px h-4 bg-brand-200" />
+                  )}
+                </div>
+
+                <h3 className="font-bold text-stone-900 text-base mb-2">{step.title}</h3>
+                <p className="text-stone-500 text-sm leading-relaxed lg:max-w-[180px]">
+                  {step.desc}
+                </p>
               </div>
-              <h3 className="font-semibold text-stone-900 text-base mb-2">{step.title}</h3>
-              <p className="text-stone-500 text-sm leading-relaxed max-w-[200px]">{step.desc}</p>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
 
       </div>

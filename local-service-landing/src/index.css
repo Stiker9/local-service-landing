@@ -28,3 +28,37 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-animate > * {
+  animation: fadeInUp 0.55s ease-out both;
+}
+.hero-animate > *:nth-child(1) { animation-delay: 0ms; }
+.hero-animate > *:nth-child(2) { animation-delay: 80ms; }
+.hero-animate > *:nth-child(3) { animation-delay: 160ms; }
+.hero-animate > *:nth-child(4) { animation-delay: 240ms; }
+.hero-animate > *:nth-child(5) { animation-delay: 300ms; }
+
+.hero-dots {
+  background-image: radial-gradient(circle, #c0ddc9 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+
+/* Hide scrollbar for trust bar */
+.scrollbar-none {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}

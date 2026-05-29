@@ -3,10 +3,17 @@ import { WhatsAppIcon, TelegramIcon, PhoneIcon } from './Icons'
 
 export default function FinalCTA() {
   return (
-    <section className="bg-brand-800 py-16 sm:py-20">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 text-center">
+    <section className="relative overflow-hidden py-16 sm:py-24" style={{ background: '#0c1f17' }}>
+      {/* Subtle radial glow */}
+      <div className="absolute inset-0 pointer-events-none"
+           style={{ background: 'radial-gradient(ellipse 70% 60% at 50% 100%, rgba(45,106,79,0.35) 0%, transparent 70%)' }} />
 
-        <p className="text-brand-200 text-sm font-medium uppercase tracking-widest mb-4">
+      {/* Dot pattern overlay */}
+      <div className="absolute inset-0 hero-dots opacity-[0.07] pointer-events-none" />
+
+      <div className="relative max-w-5xl mx-auto px-4 sm:px-6 text-center">
+
+        <p className="text-brand-200 text-sm font-bold uppercase tracking-widest mb-5">
           Связаться с мастером
         </p>
 
@@ -15,16 +22,17 @@ export default function FinalCTA() {
           мастер свяжется с вами
         </h2>
 
-        <p className="text-brand-200 text-base sm:text-lg max-w-xl mx-auto mb-10 leading-relaxed">
-          Напишите, что случилось с техникой, и укажите удобное время для выезда. Мастер ответит и согласует визит.
+        <p className="text-brand-200/80 text-base sm:text-lg max-w-xl mx-auto mb-10 leading-relaxed">
+          Напишите, что случилось с техникой, и укажите удобное время. Мастер ответит и согласует визит.
         </p>
 
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-4 max-w-lg mx-auto sm:max-w-none">
           <a
             href={business.whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-xl bg-white hover:bg-stone-100 text-brand-800 font-bold text-base transition-colors shadow-md hover:shadow-lg"
+            className="inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-xl bg-white hover:bg-stone-100 text-brand-800 font-bold text-base transition-colors"
+            style={{ boxShadow: '0 4px 24px rgba(0,0,0,0.20)' }}
           >
             <WhatsAppIcon className="w-5 h-5 text-green-600" />
             Написать в WhatsApp
@@ -33,21 +41,21 @@ export default function FinalCTA() {
             href={business.telegramUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-xl bg-sky-500 hover:bg-sky-400 text-white font-bold text-base transition-colors shadow-md hover:shadow-lg"
+            className="inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-xl bg-sky-500 hover:bg-sky-400 text-white font-bold text-base transition-colors"
           >
             <TelegramIcon className="w-5 h-5" />
             Telegram
           </a>
           <a
             href={business.phoneHref}
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-xl border-2 border-white/30 hover:border-white/60 text-white font-bold text-base transition-colors"
+            className="inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-xl border-2 border-white/20 hover:border-white/40 text-white font-bold text-base transition-colors"
           >
             <PhoneIcon className="w-5 h-5" />
             {business.phoneDisplay}
           </a>
         </div>
 
-        <p className="mt-8 text-brand-200/60 text-xs">
+        <p className="mt-10 text-brand-200/40 text-xs">
           {business.district} · {business.address} · {business.metro}
         </p>
 

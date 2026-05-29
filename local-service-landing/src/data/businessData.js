@@ -8,7 +8,7 @@ export const business = {
 
   headline: 'Ремонт стиральных и посудомоечных машин на дому',
   subheadline:
-    'Выезд мастера по Фрунзенскому району. Диагностика на месте, стоимость согласовывается после осмотра. Связь через WhatsApp и Telegram в удобное время.',
+    'Приедем в удобное время, осмотрим технику и назовём точную стоимость до начала работ. Работаем по Фрунзенскому району — связь через WhatsApp или Telegram.',
 
   rating: 5.0,
   reviewsCount: 20,
@@ -113,7 +113,9 @@ export const business = {
     'Примеры оформления блока отзывов. Реальные отзывы можно перенести из 2ГИС после согласования.',
 
   images: {
-    hero: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=80',
+    // Technician repairing a washing machine
+    hero: 'https://images.unsplash.com/photo-1621905251918-48416bd8575a?auto=format&fit=crop&w=800&q=80',
+    heroFallback: 'https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=800&q=80',
     technician:
       'https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=600&q=80',
     appliance:
