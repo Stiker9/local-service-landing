@@ -17,7 +17,7 @@ export const business = {
   rating: '5.0',
   reviewsCount: 19,
   scoresCount: 20,
-  ratingSource: '2ГИС',
+  ratingSource: '2GIS',
 
   phoneDisplay: '+7 921 314-01-81',
   phoneHref: 'tel:+79213140181',
@@ -25,7 +25,7 @@ export const business = {
   telegramUrl: '#',
   mapUrl: 'https://2gis.ru/',
 
-  badgeText: 'Рейтинг 5.0 в 2ГИС',
+  badgeText: 'Рейтинг 5.0 в 2GIS',
 
   heroCtas: {
     whatsapp: 'Написать в WhatsApp',
@@ -34,14 +34,38 @@ export const business = {
   },
 
   trustPoints: [
-    'Рейтинг 5.0 в 2ГИС',
+    'Рейтинг 5.0 в 2GIS',
     '20 оценок и 19 отзывов',
     'Работа по предварительной записи',
   ],
 
+  trustStats: [
+    {
+      value: '5.0',
+      label: 'Рейтинг в 2GIS',
+      sub: 'по данным карточки компании',
+      stars: true,
+    },
+    {
+      value: '20',
+      label: 'Оценок клиентов',
+      sub: '19 отзывов в 2GIS',
+    },
+    {
+      value: '10:00–19:00',
+      label: 'Часы работы',
+      sub: 'по предварительной записи',
+    },
+    {
+      value: 'Выезд',
+      label: 'Возможен на дом',
+      sub: 'по согласованию с мастером',
+    },
+  ],
+
+  servicesTitle: 'Что ремонтирует мастерская',
   servicesIntro:
     'В мастерской берутся за бытовую, цифровую, редкую и старую технику. Возможен выезд на дом по согласованию.',
-
   services: [
     {
       icon: '●',
@@ -74,14 +98,16 @@ export const business = {
       desc: 'Болгарки, штраборезы, обслуживание и ремонт.',
     },
   ],
-
   additionalServices:
     'Также можно уточнить ремонт проигрывателей винила, весов, игровых геймпадов, старой техники, роботов-пылесосов Xiaomi, замену аккумуляторов и ремонт редких устройств.',
 
+  pricesTitle: 'Стоимость работ',
+  pricesIntro:
+    'Ориентиры по услугам мастерской. Конкретную стоимость мастер называет после осмотра техники.',
   prices: [
     { service: 'Ремонт электроинструмента', price: 'от 490 ₽' },
     { service: 'Диагностика и оценка ремонта', price: 'после осмотра' },
-    { service: 'Ремонт мелкой бытовой техники', price: 'после диагностики' },
+    { service: 'Ремонт мелкой бытовой техники', price: 'стоимость после диагностики' },
     { service: 'Ремонт часов и редкой техники', price: 'индивидуально' },
     { service: 'Установка техники', price: 'по согласованию' },
   ],
@@ -89,7 +115,7 @@ export const business = {
     'Точная стоимость зависит от модели, состояния техники и наличия запчастей. Мастер называет цену до начала ремонта.',
 
   advantages: [
-    'Рейтинг 5.0 в 2ГИС',
+    'Рейтинг 5.0 в 2GIS',
     '20 оценок и 19 отзывов',
     'Берутся за нестандартные случаи',
     'Работают с редкой и старой техникой',
@@ -104,7 +130,7 @@ export const business = {
     {
       num: '01',
       title: 'Опишите неисправность',
-      desc: 'Напишите в WhatsApp или позвоните. Можно приложить фото техники и коротко описать проблему.',
+      desc: 'Напишите в WhatsApp или позвоните. Можно приложить фото техники и кратко описать проблему.',
     },
     {
       num: '02',
@@ -123,59 +149,65 @@ export const business = {
     },
   ],
 
+  reviewsTitle: 'Отзывы клиентов из 2GIS',
   reviews: [
     {
-      label: 'Клиент из 2ГИС',
+      label: 'Клиент из 2GIS',
       text: 'Хороший сервис, починили быстро и качественно',
       rating: 5,
-      source: '2ГИС',
+      source: '2GIS',
     },
     {
-      label: 'Клиент из 2ГИС',
+      label: 'Клиент из 2GIS',
       text: 'Только тут отремонтировали мой штраборез',
       rating: 5,
-      source: '2ГИС',
+      source: '2GIS',
     },
     {
-      label: 'Клиент из 2ГИС',
+      label: 'Клиент из 2GIS',
       text: 'Цены адекватные и говорят заранее сколько будет стоить',
       rating: 5,
-      source: '2ГИС',
+      source: '2GIS',
     },
     {
-      label: 'Клиент из 2ГИС',
+      label: 'Клиент из 2GIS',
       text: 'Очень грамотный мастер, всё показал и рассказал',
       rating: 5,
-      source: '2ГИС',
+      source: '2GIS',
     },
     {
-      label: 'Клиент из 2ГИС',
+      label: 'Клиент из 2GIS',
       text: 'Быстро и бюджетно отремонтировали робот-пылесос',
       rating: 5,
-      source: '2ГИС',
+      source: '2GIS',
     },
     {
-      label: 'Клиент из 2ГИС',
+      label: 'Клиент из 2GIS',
       text: 'Спасибо, что не отказали в ремонте старенького Пульсара',
       rating: 5,
-      source: '2ГИС',
+      source: '2GIS',
     },
     {
-      label: 'Клиент из 2ГИС',
+      label: 'Клиент из 2GIS',
       text: 'Три болгарки отдавала на ТО, на следующий день уже всё было готово',
       rating: 5,
-      source: '2ГИС',
+      source: '2GIS',
     },
   ],
-  reviewsNote: 'Отзывы клиентов из 2ГИС: 20 оценок, 19 отзывов.',
+  reviewsNote: 'Отзывы клиентов из 2GIS: 20 оценок, 19 отзывов.',
 
   finalCta: {
     headline: 'Опишите неисправность — мастер подскажет следующий шаг',
     text: 'Напишите в WhatsApp или позвоните. Можно приложить фото техники и кратко описать проблему — мастер уточнит возможность ремонта и согласует запись.',
+    buttons: {
+      whatsapp: 'WhatsApp',
+      phone: 'Позвонить',
+      telegram: 'Telegram',
+    },
   },
 
   images: {
-    hero: 'https://images.pexels.com/photos/33020760/pexels-photo-33020760.jpeg?auto=compress&cs=tinysrgb&w=1200',
-    heroFallback: 'https://images.pexels.com/photos/32602486/pexels-photo-32602486.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    hero: 'https://images.pexels.com/photos/31862950/pexels-photo-31862950.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    heroFallback: 'https://images.pexels.com/photos/31862953/pexels-photo-31862953.jpeg?auto=compress&cs=tinysrgb&w=1200',
   },
 }

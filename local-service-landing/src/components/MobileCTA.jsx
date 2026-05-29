@@ -1,5 +1,5 @@
 import { business } from '../data/businessData'
-import { WhatsAppIcon, PhoneIcon } from './Icons'
+import { WhatsAppIcon, PhoneIcon, TelegramIcon } from './Icons'
 
 export default function MobileCTA() {
   return (
@@ -15,10 +15,13 @@ export default function MobileCTA() {
         WhatsApp
       </a>
       <a
-        href={business.phoneHref}
+        href={business.telegramUrl}
+        target="_blank"
+        rel="noopener noreferrer"
         className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-sky-500 active:bg-sky-600 text-white font-bold text-sm"
       >
-        Позвонить
+        <TelegramIcon className="w-4 h-4" />
+        Telegram
       </a>
       <a
         href={business.phoneHref}
